@@ -1,6 +1,13 @@
 pipeline{
 	agent any
 	stages{
+	    stage("Pull Latest Image"){
+		    steps{
+			    bat "docker pull sureshh00007/selenium-docker"
+			
+			}		    
+		}	
+	
 		stage("Start Grid"){
 			steps{
 				bat "docker-compose up -d --no-color hub chrome firefox"			
@@ -11,7 +18,6 @@ pipeline{
 			    bat "docker-compose up search-module"
 			}
 		}	
-	
 	}
 	post{
 	    always{
