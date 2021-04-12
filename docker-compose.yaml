@@ -23,7 +23,7 @@ services:
     ports:
       - "4444:4444"
   search-module:
-    image: selenium-docker
+    image: selenium-docker:latest
     depends_on:
       - chrome
       - firefox
