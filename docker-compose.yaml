@@ -32,4 +32,4 @@ services:
       - HUB_HOST=hub
       - MODULE=searchmodule.xml
     volumes:
-      - ./search-result:/a/b/c/test-output
+      - .output//search-result:/a/b/c/test-output
