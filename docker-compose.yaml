@@ -33,15 +33,3 @@ services:
       - MODULE=searchmodule.xml
     volumes:
       - ./search-result:/a/b/c/test-output
-      
-  bool-flight-module:
-    image: selenium-docker
-    depends_on:
-      - chrome
-      - firefox
-    environment:
-      - BROWSER=Chrome
-      - HUB_HOST=hub
-      - MODULE=book-flight-module.xml
-    volumes:
-      - ./book-flight-result:/a/b/c/test-output
